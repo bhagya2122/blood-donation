@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fcefee;
+    }
+
+    header {
+      background: crimson;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .login {
+      text-align: center;
+      border: 2px solid black;
+      background-color: antiquewhite;
+      padding: 50px 20px;
+      margin: 150px auto;
+      max-width: 400px;
+      border-radius: 20px;
+      font-size: larger;
+    }
+
+    footer {
+      background: rgb(232, 0, 46);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #alertBar {
+      display: none;
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blood Donation Management System</h1>
+  </header>
+  <div id="alertBar">Login Successful!</div>
+  <div class="login">
+    Enter the username:<br>
+    <input type="text" id="username" placeholder="username" style="height: 30px; width: 100%; text-align: center;"><br><br>
+    Enter the password:<br>
+    <input type="password" id="password" placeholder="password" style="height: 30px; width: 100%; text-align: center;"><br><br>
+<a href="home.html"><button onclick="showAlert()" style="height: 30px; width: 80px;">Login</button><br><br>
+</a>    
+    <a href="new acc.html" style="font-size: 15px;">Create new account?</a>
+  </div>
+  <footer>&copy; 2025 Blood Donation Management System</footer>
+  <script>
+    function showAlert() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+          if (user === correctUsername && pass === correctPassword) {
+        var bar = document.getElementById("alertBar");
+        bar.style.display = "block";
+        setTimeout(function () {
+          bar.style.display = "none";
+          window.location.href = "home.html";
+        }, 2000);
+      } else {
+        alert("Invalid username or password!");
+      }
+    }
+  </script>
+
+</body>
+</html>
+

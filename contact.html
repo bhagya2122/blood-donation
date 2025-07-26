@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    body {
+         font-family: Arial; 
+         background: #fff0f0;
+          margin: 0;
+         }
+    header {
+         background: crimson; 
+         color: white; 
+         padding: 20px; 
+         text-align: center;
+         }
+    nav {
+         background: #333; 
+         text-align: center;
+         }
+    nav a {
+         color: white; 
+         padding: 14px 20px;
+          text-decoration: none;
+           display: inline-block;
+         }
+    nav a:hover { background: #555; }
+    .container {
+      max-width: 500px;
+       background: white;
+        margin: 40px auto; 
+        padding: 20px;
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { text-align: center; 
+        color: rgb(0, 0, 0);
+     }
+    label { display: block;
+         margin-top: 10px;
+         }
+    input, textarea {
+      width: 100%; 
+      padding: 10px; 
+      margin-top: 5px;
+      border-radius: 5px; 
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background: crimson;
+       color: white; 
+       border: none;
+      margin-top: 15px; 
+      cursor: pointer;
+    }
+    input[type="submit"]:hover { 
+        background: darkred;
+     }
+    footer { background: crimson; 
+        color: white; 
+        text-align: center;
+         padding: 10px; 
+         position: fixed; 
+         bottom: 0; 
+         width: 100%; }
+  </style>
+</head>
+<body>
+  <header><h1>Blood Donation Management System</h1></header>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="donor.html">Donor</a>
+    <a href="home.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form>
+      <label>Name:</label><input type="text" required>
+      <label>Email:</label><input type="email" required>
+      <label>Message:</label><textarea rows="5" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </div>
+  <footer>&copy; 2025 Blood Donation Management System</footer>
+</body>
+</html>
